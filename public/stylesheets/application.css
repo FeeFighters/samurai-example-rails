@@ -80,3 +80,8 @@ pre {
   padding: 5px 10px;
   font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
 }
+
+
+fieldset {
+  border: none;
+}

@@ -1,2 +1,15 @@
-<h1>Orders#transaction</h1>
-<p>Find me in app/views/orders/transaction.html.erb</p>
+<h1>Confirm Your Purchase</h1>
+
+<h2><%= @article.name %></h2>
+
+<p>
+  <strong>Amount:</strong>
+  <%= number_to_currency @article.amount %>
+</p>
+<p>
+  <strong>Credit Card:</strong>
+  <em>XXXX XXXX XXXX</em> <%= @payment_method.last_four_digits %>
+  (<%= "%02d" % @payment_method.expiry_month %> / <%= "%04d" % @payment_method.expiry_year %>)
+</p>
+
+<%= link_to 'Submit This Purchase', article_orders_path(@article, :payment_method_token=>@payment_method.token), :method=>:post %>
