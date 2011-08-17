@@ -21,5 +21,12 @@ Blog::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+
+  config.after_initialize do
+    ActiveResource::Base.logger = Rails.logger
+    ActiveSupport::Notifications.unsubscribe "request.active_resource"
+    ActiveResource::VerboseLogSubscriber.attach_to :active_resource
+  end
 end
 
+require 'pp'
