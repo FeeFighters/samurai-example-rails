@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   def payment_method
   end
 
-  # Create a new transaction with a payment_method
+  # Create a new transaction with a Payment Method
   def transaction
   end
 

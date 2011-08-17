@@ -7,3 +7,5 @@ gem 'nifty-generators'
 gem 'redcarpet'
 gem 'albino'
 gem 'nokogiri'
+
+gem 'samurai', '~> 0.2.6'
