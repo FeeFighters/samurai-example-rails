@@ -4,7 +4,8 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
+    @article = current_user.articles.find_by_id(params[:id])
+    redirect_to articles_path, :alert=>'You must purchase this article in order to view it' and return if @article.nil?
   end
 
   def new
