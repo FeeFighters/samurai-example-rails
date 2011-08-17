@@ -1,8 +1,8 @@
 Blog::Application.routes.draw do
-  get "orders#payment_method"
-  get "orders#transaction"
-  get "orders#show"
-
-  resources :articles
+  resources :articles do
+    get 'payment_method' => "orders#payment_method"
+    get 'transaction' => "orders#transaction"
+    resources :orders, :only=>[:show]
+  end
   root :to => "articles#index"
 end
