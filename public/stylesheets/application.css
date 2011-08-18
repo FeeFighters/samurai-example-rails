@@ -85,3 +85,12 @@ pre {
 fieldset {
   border: none;
 }
+
+#articles h2 span {
+  font-size: 0.7em;
+  padding-left: 20px;
+}
+
+#articles h2 span.purchased {
+  color: #CCC;
+}
