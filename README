@@ -1,7 +1,3 @@
-= RailsCasts Example Application
+= Samurai Rails Demo
 
-Run these commands to try it out.
-
-  bundle
-  rake db:migrate
-  rails s
+This is a demo rails app designed to show how easy it is to process payments using the Samurai gateway.
