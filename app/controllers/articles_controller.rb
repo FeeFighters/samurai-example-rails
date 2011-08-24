@@ -7,8 +7,10 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.find_by_id params[:id]
     if @article.nil?
       @article = Article.find params[:id]
-      redirect_to article_transaction_path(@article, :payment_method_token=>current_user.payment_method_token) and return if current_user.payment_method_token
-      redirect_to article_payment_method_path(@article) and return
+      redirect_to article_transaction_path(@article, :payment_method_token=>current_user.payment_method_token),
+                  :alert=>'You must purchase this article in order to view it' and return if current_user.payment_method_token
+      redirect_to article_payment_method_path(@article),
+                  :alert=>'You must purchase this article in order to view it' and return
     end
   end
 

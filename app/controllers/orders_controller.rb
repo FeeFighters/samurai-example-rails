@@ -37,5 +37,4 @@ class OrdersController < ApplicationController
 
     redirect_to article_path(@article), :notice=>'Thanks for purchase this article!'
   end
-
 end
