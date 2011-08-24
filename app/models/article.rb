@@ -1,3 +1,6 @@
 class Article < ActiveRecord::Base
-  attr_accessible :name, :content
+  has_many :orders
+  has_many :users, :through => :orders
+    
+  attr_accessible :name, :content, :amount
 end

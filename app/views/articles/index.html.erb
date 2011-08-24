@@ -1,8 +1,13 @@
 <% title "Articles" %>
 
-<% for article in @articles %>
-  <h2><%= link_to article.name, article %></h2>
-  <p><%= truncate article.content, :length=>100 %></p>
-<% end %>
+<div id='articles'>
+  <% for article in @articles %>
+    <h2>
+      <%= link_to article.name, article %>
+      <span class="<%= 'purchased' if purchased?(article) %>"><%= purchased?(article) ? 'Purchased' : number_to_currency(article.amount) %></span>
+    </h2>  
+    <p><%= truncate article.content, :length=>100 %></p>
+  <% end %>
+</div>
 
 <p><%= link_to "New Article", new_article_path %></p>

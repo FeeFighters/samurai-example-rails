@@ -80,3 +80,12 @@ pre {
   padding: 5px 10px;
   font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
 }
+
+#articles h2 span {
+  font-size: 0.7em;
+  padding-left: 20px;
+}
+
+#articles h2 span.purchased {
+  color: #CCC;
+}
