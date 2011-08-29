@@ -6,15 +6,15 @@ class OrdersController < ApplicationController
   end
 
   # Create/Update a payment method via Samurai Transparent Redirect
-  def payment_method
+  def new_payment_method
     params[:payment_method_token] ||= current_user.payment_method_token
     setup_for_transparent_redirect(params)
   end
 
-  # Create a new transaction with a Payment Method
-  def transaction
+  # Show the payment confirmation page
+  def payment_confirmation
     load_and_verify_payment_method(params)
-    redirect_to article_payment_method_path(@article, payment_method_params) and return unless @payment_method
+    redirect_to new_payment_method_article_orders_path(@article, payment_method_params) and return unless @payment_method
 
     current_user.update_attributes :payment_method_token=>@payment_method.token
   end
@@ -32,7 +32,7 @@ class OrdersController < ApplicationController
 
     if @transaction.failed?
       @order.destroy
-      redirect_to article_payment_method_path(@article, payment_method_params) and return
+      redirect_to new_payment_method_article_orders_path(@article, payment_method_params) and return
     end
 
     redirect_to article_path(@article), :notice=>'Thanks for purchase this article!'

@@ -1,9 +1,0 @@
-<h1>Purchase article: <%= @article.name %></h1>
-
-<%= render Samurai::Rails::Views.errors :transaction => @transaction, :payment_method => @payment_method %>
-
-<%= render Samurai::Rails::Views.payment_method_form :payment_method => @payment_method,
-                                                     :redirect_url => article_transaction_url(@article),
-                                                     :sandbox => true %>
-
-<%= link_to 'Back to the Articles', articles_path %>
