@@ -1,0 +1,45 @@
+<div id="demo">
+  <h1>Samurai Weapons</h1>
+
+  <section class="product" id="samurai_js_demo">
+    <h2>Samurai.js Katana Sword</h2>
+    <%= image_tag 'katana_sword.jpg', :width=>50, :height=>100 %>
+    <p>
+      This razor-sharp sword will cut through all of your API integration headaches.
+      It provides AJAX-powered payments with simple, drop-in forms that you can customize
+      with ease. PCI compliance is a cinch, because the credit card data never touches your server.
+    </p>
+    <footer class='purchase'>
+      <%= link_to 'Buy Now!', samurai_js_payment_form_path %>
+    </footer>
+  </section>
+
+  <section class="product" id="transparent_redirect_demo">
+    <h2>Transparent Redirect Nunchucks</h2>
+    <%= image_tag 'nunchucks.jpg', :width=>50, :height=>100 %>
+    <p>
+      These nunchunks come bundled with our Transparent Redirect process, a simple pure-HTML method for
+      processing payments without letting the credit cards touch your server.
+      You point the payment form at Samurai's secure servers, and we send back a token that you can
+      use to process transactions. Simple, effective, <em>deadly</em>.
+    </p>
+    <footer class='purchase'>
+      <%= link_to 'Buy Now!', transparent_redirect_payment_form_path %>
+    </footer>
+  </section>
+
+  <section class="product" id="s2s_demo">
+    <h2>Server-to-Server Battle Axe</h2>
+    <%= image_tag 'battle-axe.jpg', :width=>50, :height=>100 %>
+    <p>
+      Sometimes you just need to hack your way through. For these situations, our server-to-server
+      battle axe API is precisely the right tool for the job. Simply POST the credit card details to your
+      server, and process the transaction on the backend.
+      <em>(Note: those pesky PCI-compliance ninjas are sure to harass you with this approach, but you can handle it.</em>
+    </p>
+    <footer class='purchase'>
+      <%= link_to 'Buy Now!', server_to_server_payment_form_path %>
+    </footer>
+  </section>
+
+</div>

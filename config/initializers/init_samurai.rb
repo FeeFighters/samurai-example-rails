@@ -1,8 +1,8 @@
 require 'samurai'
 Samurai.options = {
   :site => 'https://api.samurai.feefighters.com/v1/',
-  :merchant_key => '197199ef0872afd92c39ceb0',
-  :merchant_password => '663b6c16fe50179d7f771c5d',
-  :processor_token => '6e340c55559335bf73c8de29'
+  :merchant_key => 'a1ebafb6da5238fb8a3ac9f6',
+  :merchant_password => 'ae1aa640f6b735c4730fbb56',
+  :processor_token => '5a0e1ca1e5a11a2997bbf912'
 }
 

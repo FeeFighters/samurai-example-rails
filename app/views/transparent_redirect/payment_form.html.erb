@@ -1,0 +1,23 @@
+<div class='payment_form'>
+  <h1>Checkout</h1>
+
+  <section class="shopping_cart">
+    <h2>Shopping Cart</h2>
+    <h3>Items:</h3>
+    <table>
+      <tr><td>(1)</td><td>Transparent Redirect Nunchucks</td>       <td>$  22.22</td></tr>
+      <tr><td></td>   <td>Overnight Shipping (battle imminent!)</td><td>$ 100.00</td></tr>
+      <tr><td colspan="3"></td></tr>
+      <tr><td></td>   <td>Total:</td>                               <td>$ 122.22</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Enter your payment information:</h2>
+    <%= render Samurai::Rails::Views.errors %>
+    <%= render Samurai::Rails::Views.payment_form :redirect_url => transparent_redirect_purchase_url,
+                                                  :sandbox => true %>
+  </section>
+
+  <%= link_to 'Back to the Samurai Weapons', root_path %>
+</div>
