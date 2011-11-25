@@ -18,10 +18,8 @@
 
         // Send the payment_method to the server and let it create the transaction
         $.post('<%= samurai_js_purchase_path %>', data.payment_method, function(data) {
-
           // Parse the transaction response JSON and convert it to an object
-          var transaction = $.parseJSON(data).transaction;
-          console.log(transaction);
+          var transaction = typeof data === 'string' ? $.parseJSON(data).transaction : data.transaction;
 
           if(transaction.success) {
             // Update the page to display the results
