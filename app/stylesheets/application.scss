@@ -346,12 +346,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 36px;
   line-height: 48px;
-  margin: 36px 0 36px;
-  //text-transform: uppercase;
-  //font-weight: bold;
-  //letter-spacing: 4px;
+  margin: 0 0 24px;
   color: #232d33;
 
   &.tagline {
@@ -364,9 +361,9 @@ h1 {
 
 h2 {
   color: #bf3d30;
-  font-size: 36px;
-  line-height: 48px;
-  margin: 24px 0 24px 0;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0 0 24px 0;
 
   &.subtitle {
     font-size: 24px;
@@ -378,9 +375,9 @@ h2 {
 
 h3 {
   color: #bf3d30;
-  font-size: 28px;
-  line-height: 36px;
-  margin: 12px 0 12px 0;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 12px 0;
 }
 
 h4 {
@@ -594,12 +591,12 @@ table {
   }
 
   thead th, &.vertical th {
-    background: #244e75;
+    background: $samurai-grey;
     color: #f6f3f0;
     font-family: $heading-font-stack;
     font-weight: normal;
     font-size: 16px;
-    border-right: 1px solid #244e75;
+    border-right: 1px solid $samurai-grey;
     text-align: left;
   }
 
@@ -1500,15 +1497,50 @@ p.buttons .button:first-child {
 }
 
 #content {
+  width: 460px;
+  padding: 0 160px;
+  
   margin-top: -9px;
   background: transparent url('../images/bg-content.png') repeat-y 50% 0;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 24px 160px 40px;
+    text-align: center;
+    width: 460px;
+    margin-left: -160px;
+    background: transparent url('../images/bg-heading-with-separator.png') repeat-y 50% 100%;
+  }
+
+  section {
+    width: 460px;
+    margin-left: -160px;
+    padding: 30px 160px 60px;
+    background: url('../images/horizontal-separator.png') no-repeat 50% 100%;
+  }
+
+  footer {
+    width: 460px;
+    margin-left: -160px;
+    position: relative;
+    bottom: -16px;
+    padding: 10px 160px 60px;
+    background: url('../images/horizontal-separator.png') no-repeat 50% 100%;
+    /*padding: 24px 0 48px;*/
+    text-align: center;
+
+    .back {
+      display: inline-block;
+    }
+  }
 }
 
 /* Products List */
 .products .product {
   overflow: hidden;
   width: 460px;
-  margin: 0 auto;
+  margin-left: -160px;
   padding: 30px 160px 60px;
   background: url('../images/horizontal-separator.png') no-repeat 50% 100%;
 
@@ -1538,5 +1570,68 @@ p.buttons .button:first-child {
 
   .purchase {
     overflow: hidden;
+  }
+}
+
+.payment-form {
+  h2 {
+    text-align: center;
+  }
+
+  .payment-info {
+    h2 {
+      margin-top: 0;
+      padding-bottom: 23px;
+      margin-bottom: 18px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  .samurai {
+    .button {
+      float: none;
+      display: block;
+      width: 180px;
+      margin: 24px auto;
+    }
+
+    fieldset {
+      padding-left: 50px;
+    }
+
+    fieldset + fieldset {
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .loading {
+      margin: 0 auto;
+      float: none;
+    }
+  }
+}
+
+.shopping-cart {
+  table {
+    width: 100%;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .total {
+      font-weight: bold;
+      background-color: #fafafa;
+    }
+  }
+}
+
+.receipt {
+  h2 {
+    margin-top: 0;
+    text-align: center;
   }
 }

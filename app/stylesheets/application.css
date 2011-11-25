@@ -644,9 +644,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500; }
 
 h1 {
-  font-size: 48px;
+  font-size: 36px;
   line-height: 48px;
-  margin: 36px 0 36px;
+  margin: 0 0 24px;
   color: #232d33; }
   h1.tagline {
     font-weight: normal;
@@ -656,9 +656,9 @@ h1 {
 
 h2 {
   color: #bf3d30;
-  font-size: 36px;
-  line-height: 48px;
-  margin: 24px 0 24px 0; }
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0 0 24px 0; }
   h2.subtitle {
     font-size: 24px;
     text-transform: uppercase;
@@ -667,9 +667,9 @@ h2 {
 
 h3 {
   color: #bf3d30;
-  font-size: 28px;
-  line-height: 36px;
-  margin: 12px 0 12px 0; }
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 12px 0; }
 
 h4 {
   color: #587f87;
@@ -825,12 +825,12 @@ table {
   table caption, table td, table th {
     line-height: 24px; }
   table thead th, table.vertical th {
-    background: #244e75;
+    background: #232d33;
     color: #f6f3f0;
     font-family: Futura, "Trebuchet MS", "Helvetica Neue", sans-serif;
     font-weight: normal;
     font-size: 16px;
-    border-right: 1px solid #244e75;
+    border-right: 1px solid #232d33;
     text-align: left; }
   table.vertical th {
     text-align: right; }
@@ -1510,14 +1510,40 @@ p.buttons .button:first-child {
     background: url("../images/bg-header-storefront.jpg") no-repeat 0 0; }
 
 #content {
+  width: 460px;
+  padding: 0 160px;
   margin-top: -9px;
   background: transparent url("../images/bg-content.png") repeat-y 50% 0; }
+  #content h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 24px 160px 40px;
+    text-align: center;
+    width: 460px;
+    margin-left: -160px;
+    background: transparent url("../images/bg-heading-with-separator.png") repeat-y 50% 100%; }
+  #content section {
+    width: 460px;
+    margin-left: -160px;
+    padding: 30px 160px 60px;
+    background: url("../images/horizontal-separator.png") no-repeat 50% 100%; }
+  #content footer {
+    width: 460px;
+    margin-left: -160px;
+    position: relative;
+    bottom: -16px;
+    padding: 10px 160px 60px;
+    background: url("../images/horizontal-separator.png") no-repeat 50% 100%;
+    /*padding: 24px 0 48px;*/
+    text-align: center; }
+    #content footer .back {
+      display: inline-block; }
 
 /* Products List */
 .products .product {
   overflow: hidden;
   width: 460px;
-  margin: 0 auto;
+  margin-left: -160px;
   padding: 30px 160px 60px;
   background: url("../images/horizontal-separator.png") no-repeat 50% 100%; }
   .products .product h2 {
@@ -1540,3 +1566,39 @@ p.buttons .button:first-child {
     float: right; }
   .products .product .purchase {
     overflow: hidden; }
+
+.payment-form h2 {
+  text-align: center; }
+.payment-form .payment-info h2 {
+  margin-top: 0;
+  padding-bottom: 23px;
+  margin-bottom: 18px;
+  text-align: center;
+  border-bottom: 1px solid #eee; }
+.payment-form .samurai .button {
+  float: none;
+  display: block;
+  width: 180px;
+  margin: 24px auto; }
+.payment-form .samurai fieldset {
+  padding-left: 50px; }
+.payment-form .samurai fieldset + fieldset {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee; }
+.payment-form .samurai .loading {
+  margin: 0 auto;
+  float: none; }
+
+.shopping-cart table {
+  width: 100%; }
+  .shopping-cart table img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; }
+  .shopping-cart table .total {
+    font-weight: bold;
+    background-color: #fafafa; }
+
+.receipt h2 {
+  margin-top: 0;
+  text-align: center; }

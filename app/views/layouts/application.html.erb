@@ -8,9 +8,14 @@
     <%= yield(:head) %>
   </head>
   <body>
+    <header id="banner">
+      <h1>Samurai Weapons</h1>
+    </header>
+
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, :class => "flash #{name}" %>
     <% end %>
+
     <%= yield %>
   </body>
 </html>
