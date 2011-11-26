@@ -1,4 +1,4 @@
-<div id="content" class="wrapper payment-form">
+<div id="content" class="wrapper payment-form s2s">
   <h1>Checkout</h1>
 
   <section class="shopping-cart">
@@ -12,7 +12,7 @@
         <tr>
           <td>1</td>
           <td><%= image_tag 'battle-axe.jpg', :size => '40x40', :class => 'left cleaner' %>Server-to-Server Battle Axe</td>
-          <td>$  22.22</td>
+          <td>$  22.00</td>
         </tr>
         <tr>
           <td></td>
@@ -22,7 +22,7 @@
         <tr class="total">
           <td></td>
           <td>Total:</td>
-          <td>$ 122.22</td>
+          <td>$ 122.00</td>
         </tr>
       </tbody>
     </table>
@@ -31,10 +31,78 @@
   <section class="payment-info">
     <h2>Enter your payment information:</h2>
     <div class="samurai">
+      <%= render Samurai::Rails::Views.errors %>
       <%= form_tag server_to_server_purchase_path do %>
-        <%= label_tag :payment_method_card_number, 'Card Number' %><%= text_field_tag :payment_method_card_number %>
-        <%= label_tag :payment_method_cvv, 'CVV' %><%= text_field_tag :payment_method_cvv %>
-        <%= submit_tag 'Purchase' %>
+        <%= fields_for :payment_method, @payment_method do |f| -%>
+          <fieldset>
+            <div class="field-group" id="credit_card_name_group">
+              <div>
+                <%= f.label :first_name %>
+                <%= f.text_field :first_name %>
+              </div>
+              <div>
+                <%= f.label :last_name %>
+                <%= f.text_field :last_name %>
+              </div>
+            </div>
+
+            <div class="field-group" id="credit_card_address_group">
+              <div>
+                <%= f.label :address_1 %>
+                <%= f.text_field :address_1 %>
+              </div>
+              <div>
+                <%= f.label :address_2 %>
+                <%= f.text_field :address_2 %>
+              </div>
+            </div>
+
+            <div class="field-group" id="location_group">
+              <div>
+                <%= f.label :city %>
+                <%= f.text_field :city %>
+              </div>
+              <div>
+                <%= f.label :state %>
+                <%= f.text_field :state %>
+              </div>
+              <div>
+                <%= f.label :zip %>
+                <%= f.text_field :zip %>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <div class="field-group" id="credit_card_info_group">
+              <div>
+                <%= f.label :card_number, 'Card Number' %>
+                <%= f.text_field :card_number %>
+              </div>
+              <div id="samurai_card_cvv">
+                <%= f.label :cvv, 'CVV' %>
+                <%= f.text_field :cvv %>
+              </div>
+            </div>
+            <div class="field-group" id="credit_card_expiration">
+              <div>
+                <%= f.label :expiry_month, 'Expires on' %>
+                <select id="payment_method_expiry_month" name="payment_method[expiry_month]">
+                <% (1..12).each do |n| -%>
+                  <option value="<%= n %>" <%= 'selected' if @payment_method.expiry_month.to_s == n.to_s %>><%= '%02d' % n %></option>
+                <% end -%>
+                </select>
+                <select id="payment_method_expiry_year" name="payment_method[expiry_year]">
+                <% (2011..2016).each do |n| -%>
+                  <option value="<%= n %>" <%= 'selected' if @payment_method.expiry_year.to_s == n.to_s %>><%= n %></option>
+                <% end -%>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <%= f.submit 'Submit Payment', :class => 'button' %>
+        <% end %>
       <% end %>
     </div>
   </section>

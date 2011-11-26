@@ -18,7 +18,7 @@ class SamuraiJsController < ApplicationController
       format.json do
         @transaction = Samurai::Processor.the_processor.purchase(
           params[:payment_method_token],
-          22.22,  # The price for the Samurai.js Katana Sword
+          122.00,  # The price for the Samurai.js Katana Sword
           {
             :descriptor => 'Samurai.js Katana Sword',
             :customer_reference => Time.now.to_f,

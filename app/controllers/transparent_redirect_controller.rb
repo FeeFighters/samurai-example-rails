@@ -24,7 +24,7 @@ class TransparentRedirectController < ApplicationController
 
     @transaction = Samurai::Processor.the_processor.purchase(
       @payment_method.token,
-      22.22,  # The price for the Transparent Redirect Nunchucks
+      122.00,  # The price for the Transparent Redirect Nunchucks
       {
         :descriptor => 'Transparent Redirect Nunchucks',
         :customer_reference => Time.now.to_f,
@@ -36,7 +36,7 @@ class TransparentRedirectController < ApplicationController
       redirect_to transparent_redirect_payment_form_path(payment_method_params) and return
     end
 
-    redirect_to transparent_redirect_show_path
+    redirect_to transparent_redirect_receipt_path
   end
 
 

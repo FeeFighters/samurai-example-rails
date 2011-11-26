@@ -1578,7 +1578,7 @@ p.buttons .button:first-child {
 .payment-form .samurai .button {
   float: none;
   display: block;
-  width: 180px;
+  width: 200px !important;
   margin: 24px auto; }
 .payment-form .samurai fieldset {
   padding-left: 50px; }
@@ -1588,6 +1588,171 @@ p.buttons .button:first-child {
 .payment-form .samurai .loading {
   margin: 0 auto;
   float: none; }
+.payment-form.transparent-redirect .samurai {
+  zoom: 1; }
+  .payment-form.transparent-redirect .samurai:before, .payment-form.transparent-redirect .samurai:after {
+    content: "";
+    display: table; }
+  .payment-form.transparent-redirect .samurai:after {
+    clear: both; }
+  .payment-form.transparent-redirect .samurai fieldset {
+    border: none;
+    padding: 0 0 0 50px; }
+  .payment-form.transparent-redirect .samurai fieldset + fieldset + fieldset {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee; }
+  .payment-form.transparent-redirect .samurai span {
+    float: left;
+    margin: 0 0 15px 0; }
+  .payment-form.transparent-redirect .samurai label {
+    display: block;
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    cursor: pointer; }
+  .payment-form.transparent-redirect .samurai .field-group:before, .payment-form.transparent-redirect .samurai .field-group:after {
+    content: "";
+    display: table; }
+  .payment-form.transparent-redirect .samurai .field-group:after {
+    clear: both; }
+  .payment-form.transparent-redirect .samurai .field-group {
+    zoom: 1; }
+  .payment-form.transparent-redirect .samurai .field-group .field-group {
+    margin-bottom: 0; }
+  .payment-form.transparent-redirect .samurai .field-group div {
+    margin-bottom: 15px; }
+  .payment-form.transparent-redirect .samurai .field-group div {
+    margin-bottom: 15px; }
+  .payment-form.transparent-redirect .samurai input {
+    padding: 8px;
+    width: 340px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box; }
+  .payment-form.transparent-redirect .samurai select {
+    font-size: 16px; }
+  .payment-form.transparent-redirect .samurai #credit_card_name_group div {
+    float: left; }
+  .payment-form.transparent-redirect .samurai #credit_card_info_group div {
+    float: left; }
+  .payment-form.transparent-redirect .samurai #location_group div {
+    float: left; }
+  .payment-form.transparent-redirect .samurai input[name='credit_card[first_name]'], .payment-form.transparent-redirect .samurai input[name='credit_card[last_name]'] {
+    width: 155px;
+    margin-right: 10px; }
+  .payment-form.transparent-redirect .samurai input[name='credit_card[city]'] {
+    width: 155px;
+    margin-right: 10px; }
+  .payment-form.transparent-redirect .samurai input[name='credit_card[state]'] {
+    width: 45px;
+    margin-right: 10px; }
+  .payment-form.transparent-redirect .samurai input[name='credit_card[zip]'] {
+    width: 84px; }
+  .payment-form.transparent-redirect .samurai input[name='credit_card[card_number]'] {
+    width: 255px;
+    margin-right: 10px; }
+  .payment-form.transparent-redirect .samurai input[name='credit_card[cvv]'] {
+    width: 55px; }
+  .payment-form.transparent-redirect .samurai input.error {
+    border-color: #bf3d30;
+    background-color: #fcf3f2; }
+  .payment-form.transparent-redirect .samurai label.error {
+    color: #bf3d30; }
+  .payment-form.transparent-redirect .samurai .show-accepted {
+    display: none; }
+.payment-form.s2s .samurai {
+  zoom: 1; }
+  .payment-form.s2s .samurai:before, .payment-form.s2s .samurai:after {
+    content: "";
+    display: table; }
+  .payment-form.s2s .samurai:after {
+    clear: both; }
+  .payment-form.s2s .samurai fieldset {
+    border: none;
+    padding: 0 0 0 50px; }
+  .payment-form.s2s .samurai fieldset + fieldset {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee; }
+  .payment-form.s2s .samurai span {
+    float: left;
+    margin: 0 0 15px 0; }
+  .payment-form.s2s .samurai label {
+    display: block;
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    cursor: pointer; }
+  .payment-form.s2s .samurai .field-group:before, .payment-form.s2s .samurai .field-group:after {
+    content: "";
+    display: table; }
+  .payment-form.s2s .samurai .field-group:after {
+    clear: both; }
+  .payment-form.s2s .samurai .field-group {
+    zoom: 1; }
+  .payment-form.s2s .samurai .field-group .field-group {
+    margin-bottom: 0; }
+  .payment-form.s2s .samurai .field-group div {
+    margin-bottom: 15px; }
+  .payment-form.s2s .samurai .field-group div {
+    margin-bottom: 15px; }
+  .payment-form.s2s .samurai input {
+    padding: 8px;
+    width: 340px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box; }
+  .payment-form.s2s .samurai select {
+    font-size: 16px; }
+  .payment-form.s2s .samurai #credit_card_name_group div {
+    float: left; }
+  .payment-form.s2s .samurai #credit_card_info_group div {
+    float: left; }
+  .payment-form.s2s .samurai #location_group div {
+    float: left; }
+  .payment-form.s2s .samurai input[name='payment_method[first_name]'], .payment-form.s2s .samurai input[name='payment_method[last_name]'] {
+    width: 155px;
+    margin-right: 10px; }
+  .payment-form.s2s .samurai input[name='payment_method[city]'] {
+    width: 155px;
+    margin-right: 10px; }
+  .payment-form.s2s .samurai input[name='payment_method[state]'] {
+    width: 45px;
+    margin-right: 10px; }
+  .payment-form.s2s .samurai input[name='payment_method[zip]'] {
+    width: 84px; }
+  .payment-form.s2s .samurai input[name='payment_method[card_number]'] {
+    width: 255px;
+    margin-right: 10px; }
+  .payment-form.s2s .samurai input[name='payment_method[cvv]'] {
+    width: 55px; }
+  .payment-form.s2s .samurai input.error {
+    border-color: #bf3d30;
+    background-color: #fcf3f2; }
+  .payment-form.s2s .samurai label.error {
+    color: #bf3d30; }
+  .payment-form.s2s .samurai .show-accepted {
+    display: none; }
+.payment-form #error_explanation {
+  font-family: sans-serif;
+  line-height: 1.5;
+  border: 1px solid #bf3d30;
+  background-color: #fcf3f2;
+  padding: 20px;
+  margin-bottom: 1em;
+  clear: both; }
+  .payment-form #error_explanation h4 {
+    letter-spacing: normal;
+    text-transform: none;
+    margin-top: 0;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #bf3d30; }
+  .payment-form #error_explanation ul {
+    margin-left: 0;
+    padding-left: 20px;
+    margin-bottom: 0;
+    list-style-position: inside; }
+    .payment-form #error_explanation ul em {
+      font-style: normal; }
 
 .shopping-cart table {
   width: 100%; }

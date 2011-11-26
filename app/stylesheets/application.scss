@@ -1592,7 +1592,7 @@ p.buttons .button:first-child {
     .button {
       float: none;
       display: block;
-      width: 180px;
+      width: 200px !important;
       margin: 24px auto;
     }
 
@@ -1610,6 +1610,206 @@ p.buttons .button:first-child {
       float: none;
     }
   }
+
+  &.transparent-redirect .samurai {
+    &:before, &:after { content: ""; display: table; }
+    &:after { clear: both }
+    zoom: 1;
+
+    fieldset { border: none; padding: 0 0 0 50px; }
+
+    fieldset + fieldset + fieldset {
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eee;
+    }
+
+    span {
+      float: left;
+      margin:  0 0 15px 0;
+    }
+
+    label {
+      display:  block;
+      font-family: sans-serif;
+      font-weight: bold;
+      line-height:  1.5;
+      cursor: pointer;
+    }
+
+    .field-group:before, .field-group:after {
+      content: "";
+      display: table;
+    }
+
+    .field-group:after { clear: both; }
+    .field-group { zoom: 1; }
+    .field-group .field-group { margin-bottom: 0; }
+    .field-group div { margin-bottom:  15px; }
+    .field-group div { margin-bottom:  15px; }
+
+    input {
+      padding: 8px;
+      width: 340px;
+      -moz-box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+    select { font-size: 16px; }
+    #credit_card_name_group div { float: left; }
+    #credit_card_info_group div { float: left; }
+    #location_group div { float: left; }
+
+    input[name='credit_card[first_name]'], input[name='credit_card[last_name]'] {
+      width:  155px;
+      margin-right: 10px;
+    }
+    input[name='credit_card[city]']  {
+      width: 155px;
+      margin-right: 10px;
+    }
+    input[name='credit_card[state]']  {
+      width:  45px;
+      margin-right: 10px;
+    }
+    input[name='credit_card[zip]'] {
+      width: 84px
+    }
+    input[name='credit_card[card_number]'] {
+      width:  255px;
+      margin-right: 10px;
+    }
+    input[name='credit_card[cvv]'] {
+      width:  55px;
+    }
+
+    input.error {
+      border-color: #bf3d30;
+      background-color: lighten(#bf3d30, 50%);
+    }
+
+    label.error {
+      color: #bf3d30;
+    }
+
+    .show-accepted {
+      display: none;
+    }
+  }
+
+  &.s2s .samurai {
+    &:before, &:after { content: ""; display: table; }
+    &:after { clear: both }
+    zoom: 1;
+
+    fieldset { border: none; padding: 0 0 0 50px; }
+
+    fieldset + fieldset {
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eee;
+    }
+
+    span {
+      float: left;
+      margin:  0 0 15px 0;
+    }
+
+    label {
+      display:  block;
+      font-family: sans-serif;
+      font-weight: bold;
+      line-height:  1.5;
+      cursor: pointer;
+    }
+
+    .field-group:before, .field-group:after {
+      content: "";
+      display: table;
+    }
+
+    .field-group:after { clear: both; }
+    .field-group { zoom: 1; }
+    .field-group .field-group { margin-bottom: 0; }
+    .field-group div { margin-bottom:  15px; }
+    .field-group div { margin-bottom:  15px; }
+
+    input {
+      padding: 8px;
+      width: 340px;
+      -moz-box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+    select { font-size: 16px; }
+    #credit_card_name_group div { float: left; }
+    #credit_card_info_group div { float: left; }
+    #location_group div { float: left; }
+
+    input[name='payment_method[first_name]'], input[name='payment_method[last_name]'] {
+      width:  155px;
+      margin-right: 10px;
+    }
+    input[name='payment_method[city]']  {
+      width: 155px;
+      margin-right: 10px;
+    }
+    input[name='payment_method[state]']  {
+      width:  45px;
+      margin-right: 10px;
+    }
+    input[name='payment_method[zip]'] {
+      width: 84px
+    }
+    input[name='payment_method[card_number]'] {
+      width:  255px;
+      margin-right: 10px;
+    }
+    input[name='payment_method[cvv]'] {
+      width:  55px;
+    }
+
+    input.error {
+      border-color: #bf3d30;
+      background-color: lighten(#bf3d30, 50%);
+    }
+
+    label.error {
+      color: #bf3d30;
+    }
+
+    .show-accepted {
+      display: none;
+    }
+  }
+
+  #error_explanation {
+    font-family: sans-serif;
+    line-height: 1.5;
+    border: 1px solid #bf3d30;
+    background-color: lighten(#bf3d30, 50%);
+    padding: 20px;
+    margin-bottom: 1em;
+    clear: both;
+
+    h4 {
+      letter-spacing: normal;
+      text-transform: none;
+      margin-top: 0;
+      font-family: $body-font-stack;
+      color: #bf3d30;
+    }
+
+    ul {
+      margin-left: 0;
+      padding-left: 20px;
+      margin-bottom: 0;
+      list-style-position: inside;
+
+      em {
+        font-style: normal;
+      }
+    }
+  }
+
 }
 
 .shopping-cart {
