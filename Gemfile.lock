@@ -35,17 +35,19 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     i18n (0.5.0)
+    json (1.6.3)
     mail (2.2.19)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.16)
+    mime-types (1.17.2)
+    mysql2 (0.2.17)
     nifty-generators (0.4.6)
-    nokogiri (1.4.6)
-    polyglot (0.3.1)
+    nokogiri (1.5.0)
+    polyglot (0.3.3)
     posix-spawn (0.3.6)
-    rack (1.2.3)
+    rack (1.2.4)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
     rack-test (0.5.7)
@@ -64,25 +66,26 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.4)
-    rake (0.9.2)
-    rdoc (3.6.1)
-    redcarpet (1.17.2)
+    rake (0.9.2.2)
+    rdoc (3.11)
+      json (~> 1.4)
+    redcarpet (2.0.0)
     samurai (0.2.29)
       activeresource (>= 2.2.2)
-    sqlite3 (1.3.3)
     thor (0.14.6)
-    treetop (1.4.9)
+    treetop (1.4.10)
+      polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.28)
+    tzinfo (0.3.31)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   albino
+  mysql2 (~> 0.2.13)
   nifty-generators
   nokogiri
   rails (= 3.0.9)
   redcarpet
   samurai (~> 0.2.29)
-  sqlite3
