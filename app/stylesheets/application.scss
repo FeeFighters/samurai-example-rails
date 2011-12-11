@@ -1037,6 +1037,7 @@ p.buttons .button:first-child {
     .current {
       position: absolute;
       overflow: hidden;
+      left: 0;
       bottom: 11px;
       width: 78px;
       margin-left: 10px;
